@@ -1,0 +1,71 @@
+Stock Price Predictor
+📈 Project Overview
+This project uses a simple machine learning model (Linear Regression) to predict the next day's closing price of a stock. It fetches historical stock data from Yahoo Finance, trains a model on this data, and then visualizes the predictions against the actual prices.
+
+⚙️ How It Works
+The script follows these key steps:
+
+Fetch Data: It downloads historical stock data for a specific ticker (e.g., 'AAPL' for Apple) using the yfinance library.
+
+Prepare Data: To predict the next day's price, it creates a target column (Next_Close) by shifting the 'Close' price data up by one day. This aligns today's data with tomorrow's closing price.
+
+Define Features: The model uses the Open, High, Low, and Volume of a given day as the features to make a prediction.
+
+Split Data: The historical data is split chronologically into two sets:
+
+Training Set (80%): Used to train the model.
+
+Testing Set (20%): Used to evaluate the model's performance on unseen data.
+
+Train Model: A LinearRegression model is trained on the training data to learn the relationship between the features and the target price.
+
+Make Predictions: The trained model predicts the closing prices for the testing set.
+
+Visualize Results: The script plots the actual closing prices against the model's predicted prices to provide a visual comparison of its performance.
+
+Predict Tomorrow's Price: Finally, it uses the most recent day's data to predict the closing price for the upcoming trading day.
+
+📋 Requirements
+To run this script, you need to have Python installed along with the following libraries:
+
+yfinance
+
+pandas
+
+scikit-learn
+
+matplotlib
+
+You can install all the required libraries by running this command in your terminal:
+
+pip install yfinance pandas scikit-learn matplotlib
+
+▶️ How to Run
+Save the code as a Python file (e.g., predict.py).
+
+Open your terminal or command prompt.
+
+Navigate to the directory where you saved the file.
+
+Run the script using the following command:
+
+python predict.py
+
+📊 Expected Output
+After running the script, you will see:
+
+A pop-up window displaying a chart that compares the actual and predicted stock prices.
+
+A message printed in the terminal showing the most recent day's data and the model's prediction for the next day's closing price.
+
+Example terminal output:
+
+Today's Data (2025-08-01):
+Open      207.57
+High      209.84
+Low       207.16
+Close     208.49
+Volume    80698400.0
+Name: 2025-08-01, dtype: float64
+
+Predicted Closing Price for Tomorrow:
