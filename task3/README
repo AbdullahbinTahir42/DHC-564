@@ -1,0 +1,112 @@
+Heart Disease Prediction using Logistic Regression
+This project uses a classic heart disease dataset to perform exploratory data analysis (EDA) and build a machine learning model to predict whether a patient has heart disease. The model of choice is a Logistic Regression classifier, a fundamental algorithm for binary classification tasks.
+
+📜 Table of Contents
+Project Overview
+
+Dataset
+
+Requirements
+
+How to Run
+
+Code Explanation
+
+Results
+
+>Project Overview
+The primary goal of this script is to analyze the relationship between various clinical features and the presence of heart disease. It follows these key steps:
+
+Data Loading and Inspection: Loads the heart.csv dataset and performs an initial inspection.
+
+Exploratory Data Analysis (EDA): Creates several visualizations to uncover patterns and relationships in the data, such as:
+
+Age distribution for patients with and without heart disease.
+
+The link between cholesterol levels and heart disease.
+
+The frequency of heart disease across different types of chest pain.
+
+Model Training: Prepares the data and trains a LogisticRegression model.
+
+Model Evaluation: Evaluates the model's performance on a held-out test set using the accuracy score.
+
+>📊 Dataset
+The project uses the Heart Disease UCI dataset, provided here as heart.csv. It contains 14 columns (features) from 303 patients.
+
+Key Features:
+
+age: Age of the patient in years.
+
+sex: (1 = male; 0 = female)
+
+cp: Chest pain type (0-3)
+
+chol: Serum cholesterol in mg/dl
+
+trestbps: Resting blood pressure (in mm Hg)
+
+thalach: Maximum heart rate achieved
+
+target: The diagnosis of heart disease (the predicted attribute). 0 = No Disease, 1 = Has Disease.
+
+>⚙️ Requirements
+You will need Python 3 and the following libraries to run this script:
+
+pandas
+
+seaborn
+
+matplotlib
+
+scikit-learn
+
+>🚀 How to Run
+Clone or Download: Get a copy of the project files on your local machine.
+
+Place the Dataset: Ensure the heart.csv file is in the same directory as your Python script.
+
+Install Dependencies: Open your terminal or command prompt and install the required libraries using pip.
+
+Bash
+
+pip install pandas seaborn matplotlib scikit-learn
+Execute the Script: Run the script from your terminal.
+
+Bash
+
+python your_script_name.py
+The script will execute, display the three plots one by one, and finally print the model's accuracy in the terminal.
+
+>👨‍💻 Code Explanation
+Import Libraries: The script begins by importing all necessary tools for data manipulation (pandas), visualization (seaborn, matplotlib), and machine learning (scikit-learn).
+
+Load and Inspect Data: The heart.csv dataset is loaded into a pandas DataFrame. df.head(), df.info(), and df.describe() are used to get a quick overview of the data's structure, types, and statistical summary.
+
+Exploratory Data Analysis (EDA):
+
+Age Distribution (sns.kdeplot): A Kernel Density Estimate plot shows the distribution of ages, separated (hue) by whether the patient has heart disease (target). This helps visualize if a certain age group is more prone to the disease.
+
+Cholesterol Levels (sns.boxplot): A box plot compares the distribution of cholesterol levels for patients with and without heart disease.
+
+Chest Pain Type (sns.countplot): A count plot shows the number of patients for each type of chest pain, further broken down by their heart disease status. This is crucial for understanding the importance of the cp feature.
+
+>Model Training & Prediction:
+
+The data is separated into features (x) and the target variable (y).
+
+The dataset is split into a training set (80%) and a testing set (20%) using train_test_split to ensure the model is evaluated on unseen data.
+
+A LogisticRegression model is initialized (with max_iter=1500 to ensure convergence) and trained using the .fit() method on the training data.
+
+The trained model then makes predictions on the test set features (x_test) using the .predict() method.
+
+Evaluation: The accuracy_score function compares the model's prediction with the actual y_test values to calculate the model's accuracy.
+
+>✅ Results
+After running the script, the final output printed to the console will be the accuracy of the logistic regression model on the test data.
+
+Example output:
+
+Model Accuracy: 88.52%
+This indicates that the model correctly predicted the presence or absence of heart disease for approximately 88.5% of the patients in the test set.
