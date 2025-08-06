@@ -51,29 +51,6 @@ Python 3.8 or newer
 
 A Google Gemini API Key
 
-Installation
-Clone the repository (or download the files into a new folder):
-
-Bash
-
-git clone https://github.com/your-username/health-chatbot.git
-cd health-chatbot
-Create and activate a virtual environment (recommended):
-
-On Windows:
-
-Bash
-
-python -m venv venv
-.\venv\Scripts\activate
-On macOS/Linux:
-
-Bash
-
-python -m venv venv
-source venv/bin/activate
-Create a requirements.txt file with the following content:
-
 Plaintext
 
 google-generativeai
