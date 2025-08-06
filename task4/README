@@ -1,0 +1,110 @@
+General Health Query Chatbot 🩺
+A responsible, command-line AI assistant powered by the Google Gemini API. This chatbot is designed to answer general health-related questions clearly and safely, providing educational information without giving medical advice.
+
+Description
+This project is a Python-based conversational agent that leverages Google's gemini-1.5-flash-latest model. The core focus is on responsible AI, with a carefully engineered system prompt and safety settings to ensure the chatbot does not dispense harmful medical advice, diagnose conditions, or act as a substitute for a qualified healthcare professional. It serves as an accessible tool for obtaining general health knowledge.
+
+Features
+Conversational Context: Remembers the flow of the conversation for follow-up questions.
+
+Powered by Gemini: Uses Google's fast and capable Gemini 1.5 Flash model for high-quality responses.
+
+Safety-First Design: A strong system prompt and safety filters prevent the bot from giving medical advice and block harmful content.
+
+Easy Setup: Uses environment variables (.env file) to securely manage API keys.
+
+Simple CLI: An interactive and easy-to-use command-line interface.
+
+Demo
+Here is a sample interaction with the HealthBot:
+
+HealthBot (Gemini Edition) is ready! Type 'exit' to quit.
+You: What is the difference between a virus and a bacteria?
+Bot: Viruses and bacteria are both tiny microbes that can cause illness, but they are fundamentally different.
+
+A key distinction is their structure. Bacteria are single-celled, living organisms with all the machinery they need to reproduce on their own. Viruses are much smaller and are not considered fully "alive" because they are essentially just genetic material (DNA or RNA) wrapped in a protein coat. They cannot reproduce on their own and must infect a living host cell to replicate.
+
+This difference is why antibiotics work on bacterial infections but are ineffective against viral infections like the common cold or flu.
+
+Disclaimer: I am an AI assistant and not a medical professional. This information is for educational purposes only. Please consult a qualified healthcare professional for any health concerns or before making any decisions related to your health.
+
+You: I have a bad headache, what should I do?
+Bot: I'm sorry to hear you have a headache. However, I cannot provide any medical advice or diagnosis. It's very important to speak with a qualified healthcare professional who can properly assess your symptoms and give you the right guidance.
+
+Please consult a doctor or visit a clinic to get the help you need.
+Tech Stack
+Language: Python 3
+
+AI Model: Google Gemini API (gemini-1.5-flash-latest)
+
+Core Libraries:
+
+google-generativeai: The official Google AI Python SDK.
+
+python-dotenv: For managing environment variables.
+
+Getting Started
+Follow these instructions to set up and run the project on your local machine.
+
+Prerequisites
+Python 3.8 or newer
+
+A Google Gemini API Key
+
+Installation
+Clone the repository (or download the files into a new folder):
+
+Bash
+
+git clone https://github.com/your-username/health-chatbot.git
+cd health-chatbot
+Create and activate a virtual environment (recommended):
+
+On Windows:
+
+Bash
+
+python -m venv venv
+.\venv\Scripts\activate
+On macOS/Linux:
+
+Bash
+
+python -m venv venv
+source venv/bin/activate
+Create a requirements.txt file with the following content:
+
+Plaintext
+
+google-generativeai
+python-dotenv
+Install the required packages:
+
+Bash
+
+pip install -r requirements.txt
+Set up your API Key:
+
+Create a file named .env in the root of your project folder.
+
+Get your API key from Google AI Studio.
+
+Add your key to the .env file like this:
+
+Code snippet
+
+GEMINI_API_KEY="Your_Gemini_API_Key_Goes_Here"
+Usage
+Once the setup is complete, run the chatbot with the following command:
+
+Bash
+
+python health_care_bot.py
+You can now start asking the chatbot questions directly in your terminal. Type exit to end the session.
+
+⚠️ Disclaimer and Limitations
+Not a Medical Device: This chatbot is an informational tool only. It is not a substitute for professional medical advice, diagnosis, or treatment.
+
+Consult a Professional: Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.
+
+Accuracy: While powered by a state-of-the-art model, Large Language Models can make mistakes or "hallucinate" information. Always verify critical information from trusted sources.
