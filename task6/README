@@ -1,0 +1,50 @@
+# 🏠 House Price Prediction using Gradient Boosting
+
+This project trains a **Gradient Boosting Regressor** to predict house prices using housing-related features such as location, median income, and number of rooms.  
+The goal is to predict the **Price** of a house based on the provided dataset.
+
+---
+
+## 📂 Dataset
+The dataset contains the following columns:
+
+- `longitude` — Geographic coordinate
+- `latitude` — Geographic coordinate
+- `housing_median_age` — Median age of houses in the block
+- `total_rooms` — Total number of rooms
+- `total_bedrooms` — Total number of bedrooms
+- `population` — Population of the block
+- `households` — Number of households
+- `median_income` — Median income of households
+- `Price` — **Target variable** (house price)    #median_house_value
+- `ocean_proximity` — Categorical feature (proximity to the ocean)
+
+---
+
+## 🛠️ Technologies Used
+- **Python 3**
+- **Pandas** — Data handling
+- **Scikit-learn** — Machine learning & preprocessing
+- **NumPy** — Numerical computations
+
+---
+
+## 📋 Steps Performed
+1. **Load the dataset** using Pandas.
+2. **One-hot encode** the `ocean_proximity` categorical column.
+3. **Handle missing values** by replacing them with the column mean.
+4. **Split the dataset** into training and testing sets (80/20).
+5. **Train** a `GradientBoostingRegressor` model.
+6. **Evaluate** the model using:
+   - **RMSE (Root Mean Squared Error)**
+   - **R² Score** (coefficient of determination)
+
+---
+
+## 📊 Results
+- **RMSE:** `48,375.08` → On average, predictions are off by around $48k.
+- **R² Score:** `0.82` → The model explains ~82% of the variance in house prices.
+
+---
+
+
