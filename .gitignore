@@ -6,3 +6,4 @@ vscode/
 __pycache__/
 *.py[cod]$
 /task4/.env
+/task5/venv
